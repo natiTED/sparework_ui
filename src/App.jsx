@@ -13,14 +13,20 @@ import Orders from "./pages/orders/Orders";
 import Messages from "./pages/messages/Messages";
 import Message from "./pages/message/Message";
 import MyGigs from "./pages/myGigs/MyGigs";
+import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
+import Pay from "./pages/pay/Pay";
+import Success from "./pages/success/Success";
 
 function App() {
+  const queryClient = new QueryClient();
   const Layout = () => {
     return (
       <div className="app">
-        <Navbar />
-        <Outlet />
-        <Footer />
+        <QueryClientProvider client={queryClient}>
+          <Navbar />
+          <Outlet />
+          <Footer />
+        </QueryClientProvider>
       </div>
     );
   };
@@ -61,6 +67,14 @@ function App() {
         {
           path: "/gig/:id",
           element: <Gig />,
+        },
+        {
+          path: "/pay/:id",
+          element: <Pay />,
+        },
+        {
+          path: "/success",
+          element: <Success />,
         },
       ],
     },

@@ -1,8 +1,8 @@
 export const cards = [
   {
     id: 1,
-    title: "AI Artists",
-    desc: "Add talent to AI",
+    title: "Web Developers",
+    desc: "Fully responsive webs",
     img: "https://images.pexels.com/photos/7532110/pexels-photo-7532110.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load",
   },
   {
