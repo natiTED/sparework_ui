@@ -1,0 +1,53 @@
+// Variables for colors and sizing
+$primary-color: #4caf50; // Success green
+$background-color: #f9f9f9;
+$text-color: #333;
+$loader-color: #4caf50;
+$font-family: "Arial", sans-serif;
+
+.success-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: $background-color;
+  color: $text-color;
+  font-family: $font-family;
+  text-align: center;
+  padding: 20px;
+
+  .success-message {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-bottom: 20px;
+    color: $primary-color;
+  }
+
+  .redirect-message {
+    font-size: 1rem;
+    margin-bottom: 10px;
+    color: darken($text-color, 20%);
+  }
+
+  // Simple animation to give visual feedback during redirect
+  .loader {
+    width: 50px;
+    height: 50px;
+    border: 6px solid lighten($loader-color, 40%);
+    border-top: 6px solid $loader-color;
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+    margin-top: 20px;
+  }
+
+  // Spinner animation
+  @keyframes spin {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+}

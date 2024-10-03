@@ -59,7 +59,7 @@ const Navbar = () => {
                   {currentUser.isSeller && (
                     <>
                       <Link className="link" to="/mygigs">
-                        Gigs
+                        myGigs
                       </Link>
                       <Link className="link" to="/add">
                         Add New Gig

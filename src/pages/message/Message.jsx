@@ -40,7 +40,7 @@ const Message = () => {
     <div className="message">
       <div className="container">
         <span className="breadcrumbs">
-          <Link to="/messages">Messages</Link> &gt; John Doe &gt;
+          <Link to="/messages">Messages</Link>
         </span>
         {isLoading ? (
           "loading"
